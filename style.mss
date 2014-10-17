@@ -1,16 +1,17 @@
 // Languages: name (local), name_en, name_fr, name_es, name_de
 @name: '[name_en]';
-@name_haunted: "[name_en].replace('.(Heights)',' Haunted $`')";
+@name_haunted: "[name_en].replace('(.+)(Heights)','Haunted $1`')";
 @name_zombie: "[name_en].replace('.(New)','Zombie')";
 
 // Common Colors //
-@water: #c3e6ff;
+@water: #B0C7C2;
 @park: #BC9507;
 
 @regtype: 'Elementa Pro Regular'; 
 
 Map {
   background-color:#fff;
+//  background-image:url(footer_lodyas.png);
 }
 
 
@@ -33,7 +34,7 @@ Map {
 // Places //
 
 #place_label {
-// ::zombie [name=~'.*New*'] { text-name: @name_zombie; }
+// ::zombie [name =~ '.+(New).+'] { text-name: @name_zombie; }
   [type='city'][zoom<=15]{
     text-name: @name;
     text-face-name: @regtype;
@@ -58,7 +59,7 @@ Map {
   [type='hamlet'],
   [type='suburb'],
   [type='neighbourhood'] {
-    text-name: @name;
+    text-name: @name_haunted;
     text-face-name: @regtype; 
     text-fill: #666;
     text-size: 12;
@@ -153,20 +154,6 @@ Map {
 }
 
 
-
-
-// Buildings //
-
-#building {
-  polygon-fill: #f9f0e3;
-  [zoom>=17] {
-   // text-name: @name;
-    // text-size: 11;
-    }
-}
-
-
-
 // Roads & Railways //
 
 #tunnel { opacity: 0.5; }
@@ -180,9 +167,9 @@ Map {
     line-width: 0.5;
     [class='main'] {
       [zoom>=10] { line-width: 1; }
-      [zoom>=12] { line-width: 2; }
-      [zoom>=14] { line-width: 3; }
-      [zoom>=16] { line-width: 5; }
+    [zoom>=12] { line-width: 2; }
+     [zoom>=14] { line-width: 3; }
+     [zoom>=16] { line-width: 5; }
     }
     [class='street'],
     [class='street_limited'] {

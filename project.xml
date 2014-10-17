@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[Map data © OpenStreetMap contributors]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-81.7767,41.4082,10</Parameter>
+  <Parameter name="center">-81.642,41.4099,14</Parameter>
   <Parameter name="description"><![CDATA[welcome to a new world order. ]]></Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">17</Parameter>
@@ -29,68 +29,68 @@
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <Filter>([type] = 'stream')</Filter>
-    <LineSymbolizer stroke-width="3" stroke="#c3e6ff" />
+    <LineSymbolizer stroke-width="3" stroke="#b0c7c2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([type] = 'stream')</Filter>
-    <LineSymbolizer stroke-width="2" stroke="#c3e6ff" />
+    <LineSymbolizer stroke-width="2" stroke="#b0c7c2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'stream')</Filter>
-    <LineSymbolizer stroke-width="1" stroke="#c3e6ff" />
+    <LineSymbolizer stroke-width="1" stroke="#b0c7c2" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'stream')</Filter>
-    <LineSymbolizer stroke="#c3e6ff" stroke-width="0.5" />
+    <LineSymbolizer stroke="#b0c7c2" stroke-width="0.5" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'canal')</Filter>
-    <LineSymbolizer stroke-width="3" stroke="#c3e6ff" />
+    <LineSymbolizer stroke-width="3" stroke="#b0c7c2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'canal')</Filter>
-    <LineSymbolizer stroke-width="2" stroke="#c3e6ff" />
+    <LineSymbolizer stroke-width="2" stroke="#b0c7c2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'canal')</Filter>
-    <LineSymbolizer stroke-width="1" stroke="#c3e6ff" />
+    <LineSymbolizer stroke-width="1" stroke="#b0c7c2" />
   </Rule>
   <Rule>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([type] = 'canal')</Filter>
-    <LineSymbolizer stroke="#c3e6ff" stroke-width="0.5" />
+    <LineSymbolizer stroke="#b0c7c2" stroke-width="0.5" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'river')</Filter>
-    <LineSymbolizer stroke-width="3" stroke="#c3e6ff" />
+    <LineSymbolizer stroke-width="3" stroke="#b0c7c2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'river')</Filter>
-    <LineSymbolizer stroke-width="2" stroke="#c3e6ff" />
+    <LineSymbolizer stroke-width="2" stroke="#b0c7c2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'river')</Filter>
-    <LineSymbolizer stroke-width="1" stroke="#c3e6ff" />
+    <LineSymbolizer stroke-width="1" stroke="#b0c7c2" />
   </Rule>
   <Rule>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([type] = 'river')</Filter>
-    <LineSymbolizer stroke="#c3e6ff" stroke-width="0.5" />
+    <LineSymbolizer stroke="#b0c7c2" stroke-width="0.5" />
   </Rule>
 </Style>
 <Layer name="waterway"
@@ -155,36 +155,15 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
-<Style name="building" filter-mode="first">
-  <Rule>
-    <PolygonSymbolizer fill="#f9f0e3" />
-  </Rule>
-</Style>
 <Layer name="building"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>building</StyleName>  </Layer>
+      </Layer>
 
 <Layer name="landuse_overlay"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
 <Style name="tunnel" filter-mode="first" opacity="0.5">
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
-    <LineSymbolizer stroke-width="3" stroke="#717171" stroke-opacity="0.33" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
-    <LineSymbolizer stroke-width="1" stroke="#717171" stroke-opacity="0.33" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
-    <LineSymbolizer stroke="#717171" stroke-opacity="0.33" stroke-width="0.5" />
-  </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
@@ -200,6 +179,22 @@
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
     <LineSymbolizer stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#717171" stroke-opacity="0.33" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#717171" stroke-opacity="0.33" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#717171" stroke-opacity="0.33" stroke-width="0.5" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -382,18 +377,18 @@
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <Filter>([admin_level] = 2) and ([disputed] = 1) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="4, 4" stroke-width="4" stroke="#b4e0ff" stroke-linejoin="round" />
+    <LineSymbolizer stroke-dasharray="4, 4" stroke-width="4" stroke="#a7c1bb" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500000</MaxScaleDenominator>
     <MinScaleDenominator>3000000</MinScaleDenominator>
     <Filter>([admin_level] = 2) and ([disputed] = 1) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="4, 4" stroke-width="2" stroke="#b4e0ff" stroke-linejoin="round" />
+    <LineSymbolizer stroke-dasharray="4, 4" stroke-width="2" stroke="#a7c1bb" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MinScaleDenominator>12500000</MinScaleDenominator>
     <Filter>([admin_level] = 2) and ([disputed] = 1) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="4, 4" stroke-width="1.4" stroke="#b4e0ff" stroke-linejoin="round" />
+    <LineSymbolizer stroke-dasharray="4, 4" stroke-width="1.4" stroke="#a7c1bb" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
@@ -414,18 +409,18 @@
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <Filter>([admin_level] = 2) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-width="4" stroke="#b4e0ff" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="4" stroke="#a7c1bb" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500000</MaxScaleDenominator>
     <MinScaleDenominator>3000000</MinScaleDenominator>
     <Filter>([admin_level] = 2) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-width="2" stroke="#b4e0ff" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="2" stroke="#a7c1bb" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MinScaleDenominator>12500000</MinScaleDenominator>
     <Filter>([admin_level] = 2) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-width="1.4" stroke="#b4e0ff" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="1.4" stroke="#a7c1bb" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
@@ -445,7 +440,7 @@
   </Rule>
   <Rule>
     <Filter>([maritime] = 1)</Filter>
-    <LineSymbolizer stroke="#b4e0ff" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#a7c1bb" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <LineSymbolizer stroke-linejoin="round" stroke="#bbbbee" />
@@ -476,18 +471,18 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([type] = 'town')</Filter>
-    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#333333" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('.(Heights)',' Haunted $`')]]></TextSymbolizer>
+    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#333333" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([type] = 'town')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#333333" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('.(Heights)',' Haunted $`')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#333333" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>750000</MinScaleDenominator>
     <Filter>([type] = 'town')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#333333" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('.(Heights)',' Haunted $`')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#333333" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
@@ -509,66 +504,66 @@
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'village')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'village')</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'village')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'suburb')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'suburb')</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'suburb')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'hamlet')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'hamlet')</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'hamlet')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'suburb')</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'suburb')</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'suburb')</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1`')]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="place_label"
@@ -579,30 +574,30 @@
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <Filter>([area] &gt; 500000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#2aa6ff" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([area] &gt; 500000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#2aa6ff" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([area] &gt; 10000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#2aa6ff" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([area] &gt; 10000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#2aa6ff" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#2aa6ff" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#2aa6ff" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="water_label"

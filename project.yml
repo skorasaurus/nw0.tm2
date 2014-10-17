@@ -10,9 +10,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -81.7767
-  - 41.4082
-  - 10
+  - -81.642
+  - 41.4099
+  - 14
 description: 'welcome to a new world order. '
 format: "png8:m=h"
 interactivity_layer: ''
