@@ -13,7 +13,7 @@
 
 Map {
   background-color:#fff;
-//  background-image:url(footer_lodyas.png);
+  background-image:url(footer_lodyas.png);
 }
 
 
@@ -22,7 +22,7 @@ Map {
 #admin {
   line-join: round;
   line-color: #bbe;
-  [maritime=1] { line-color: darken(@water, 3%); }
+//  [maritime=1] { line-color: darken(@water, 3%); }
   // Countries
   [admin_level=2] {
     line-width: 1.4;
@@ -42,7 +42,7 @@ Map {
 {
     text-name: @name;
     text-face-name: @regtype;
-    text-fill: #444;
+    
     text-size: 16;
     text-wrap-width: 100;
     text-wrap-before: true;
@@ -85,7 +85,7 @@ Map {
   ::light15[zoom=15],
   ::light16[zoom=16],
   ::light17[zoom>=17] {
-    polygon-fill: #fff;
+    polygon-fill: #aaa;
     polygon-gamma: 0.9;
     image-filters: agg-stack-blur(8,8);
     image-filters-inflate: true;
