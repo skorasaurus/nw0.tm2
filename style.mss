@@ -1,7 +1,9 @@
 // Languages: name (local), name_en, name_fr, name_es, name_de
 @name: '[name_en]';
-@name_haunted: "[name_en].replace('(.+)(Heights)','Haunted $1`')";
-@name_zombie: "[name_en].replace('(New)(.+)','Zombie $2`')";
+@name_haunted: "[name_en].replace('(.+)(Heights)','Haunted $1')";
+@name_zombie: "[name_en].replace('(New)(.+)','Zombie$2')";
+@name_madvillians: "[name_en].replace('(.+)(ville)','$1villians')";
+
 
 // Common Colors //
 @water: #B0C7C2;
@@ -35,6 +37,7 @@ Map {
 
 #place_label {
       ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
+    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
    [type='city'][zoom<=15]
 {
     text-name: @name;
