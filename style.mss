@@ -1,7 +1,7 @@
 // Languages: name (local), name_en, name_fr, name_es, name_de
 @name: '[name_en]';
 @name_haunted: "[name_en].replace('(.+)(Heights)','Haunted $1`')";
-@name_zombie: "[name_en].replace('.(New)','Zombie')";
+@name_zombie: "[name_en].replace('(New)(.+)','Zombie $2`')";
 
 // Common Colors //
 @water: #B0C7C2;
@@ -34,8 +34,9 @@ Map {
 // Places //
 
 #place_label {
-// ::zombie [name =~ '.+(New).+'] { text-name: @name_zombie; }
-  [type='city'][zoom<=15]{
+      ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
+   [type='city'][zoom<=15]
+{
     text-name: @name;
     text-face-name: @regtype;
     text-fill: #444;
