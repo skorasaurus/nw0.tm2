@@ -3,10 +3,11 @@
 
 #place_label {
    [type='city'][zoom<=15]
-{
+{   text-size: 16;
     ::haunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
     ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
     ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
+    ::hell [name =~ '.*(hill).*'] { text-name: @name_hell; text-face-name: @regtype; }
     text-name: @name;
     text-face-name: @regtype;
     text-size: 16;
@@ -16,13 +17,14 @@
     [zoom>=12] { text-size: 24; }
   }
   [type='town'][zoom<=17] {
-    ::aunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
-    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
-    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
-    text-name: @name_haunted;
+    text-size: 14;
     text-face-name: @regtype; 
     text-fill: #333;
-    text-size: 14;
+    ::haunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
+    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
+    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
+    ::hell [name =~ '.*(hill).*'] { text-name: @name_hell; text-face-name: @regtype; }
+    text-name: @name; 
     text-wrap-width: 100;
     text-wrap-before: true;
     [zoom>=10] { text-size: 16; }
@@ -32,10 +34,14 @@
   [type='hamlet'],
   [type='suburb'],
   [type='neighbourhood'] {
-    text-name: @name_haunted;
     text-face-name: @regtype; 
     text-fill: #666;
     text-size: 12;
+      ::haunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
+    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
+    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
+    ::hell [name =~ '.*(hill).*'] { text-name: @name_hell; text-face-name: @regtype; }
+    text-name: @name; 
     text-wrap-width: 100;
     text-wrap-before: true;
     [zoom>=14] { text-size: 14; }
