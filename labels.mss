@@ -17,16 +17,16 @@
     [zoom>=12] { text-size: 24; }
   }
   [type='town'][zoom<=17] {
-    text-size: 14;
     text-face-name: @regtype; 
-    text-fill: #333;
-    ::haunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
-    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
-    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
-    ::hell [name =~ '.*(hill).*'] { text-name: @name_hell; text-face-name: @regtype; }
+    text-fill: #666;
+    text-size: 14; 
     text-name: @name; 
     text-wrap-width: 100;
     text-wrap-before: true;
+    [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
+    [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
+    [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
+    [name =~ '.*(hill).*'] { text-name: @name_hell; text-face-name: @regtype; }
     [zoom>=10] { text-size: 16; }
     [zoom>=12] { text-size: 20; }
   }
@@ -37,13 +37,14 @@
     text-face-name: @regtype; 
     text-fill: #666;
     text-size: 12;
-      ::haunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
-    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
-    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
-    ::hell [name =~ '.*(hill).*'] { text-name: @name_hell; text-face-name: @regtype; }
     text-name: @name; 
     text-wrap-width: 100;
     text-wrap-before: true;
+    [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
+    [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
+    [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
+    [name =~ '.*(hill).*'] { text-name: @name_hell; text-face-name: @regtype; }
+   
     [zoom>=14] { text-size: 14; }
     [zoom>=16] { text-size: 16; }
   }
