@@ -10,9 +10,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -81.682
-  - 41.4382
-  - 12
+  - -81.6618
+  - 41.4477
+  - 17
 description: 'welcome to a new world order. '
 format: "png8:m=h"
 interactivity_layer: ''
@@ -23,4 +23,5 @@ name: nW0
 source: "mapbox:///mapbox.mapbox-streets-v4"
 styles: 
   - style.mss
+  - labels.mss
 template: ''

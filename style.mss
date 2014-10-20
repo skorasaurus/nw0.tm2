@@ -6,12 +6,12 @@
 @name_hell: "[name_en].replace('(.+)(hell)(.+)','$1hell$2')";
 @name_body: "[name_en].replace('Lake(.+)','Body of$1')";
 
+@regtype: 'Elementa Pro Regular'; 
 
 // Common Colors //
 @water: #B0C7C2;
 @park: #BC9507;
 
-@regtype: 'Elementa Pro Regular'; 
 
 Map {
   background-image:url(footer_lodyas.png);
@@ -24,51 +24,6 @@ Map {
 
 
 
-// Places //
-
-#place_label {
-   [type='city'][zoom<=15]
-{
-    ::haunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
-    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
-    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
-    text-name: @name;
-    text-face-name: @regtype;
-    text-size: 16;
-    text-wrap-width: 100;
-    text-wrap-before: true;
-    [zoom>=10] { text-size: 18; }
-    [zoom>=12] { text-size: 24; }
-  }
-  [type='town'][zoom<=17] {
-    ::aunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
-    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
-    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
-    text-name: @name_haunted;
-    text-face-name: @regtype; 
-    text-fill: #333;
-    text-size: 14;
-    text-wrap-width: 100;
-    text-wrap-before: true;
-    [zoom>=10] { text-size: 16; }
-    [zoom>=12] { text-size: 20; }
-  }
-  [type='village'],
-  [type='hamlet'],
-  [type='suburb'],
-  [type='neighbourhood'] {
-    text-name: @name_haunted;
-    text-face-name: @regtype; 
-    text-fill: #666;
-    text-size: 12;
-    text-wrap-width: 100;
-    text-wrap-before: true;
-    [zoom>=14] { text-size: 14; }
-    [zoom>=16] { text-size: 16; }
-  }
-
-
-}
 
 // Water Features //
 
@@ -90,19 +45,7 @@ Map {
  ::light17[zoom<=17] { image-filters: agg-stack-blur(64,64); }
   } 
   
-#water_label {
-  [zoom<=13],  // automatic area filtering @ low zooms
-  [zoom>=14][area>500000],
-  [zoom>=16][area>10000],
-  [zoom>=17] {
-    text-name: @name_body;
-    text-face-name: @regtype;
-    text-fill: darken(@water, 30%);
-    text-size: 13;
-    text-wrap-width: 100;
-    text-wrap-before: true;
-  }
-}
+
 
 #waterway {
   [type='river'],
@@ -128,29 +71,14 @@ Map {
 #landuse {
   [class='park'] { polygon-fill: @park; 
     opacity: 0.4;
+   } 
 //  ::dark { polygon-fill: #aaa; }
    // ::lite15[zoom> 15] {      
   // image-filters: blur; 
      // comp-op: grain-merge; 
-}
+}  
 
-#area_label {
-  [class='park'] {
-    [zoom<=13],  // automatic area filtering @ low zooms
-    [zoom>=14][area>500000],
-    [zoom>=16][area>10000],
-    [zoom>=17] {
-      text-name: @name;
-      text-face-name: 'Source Sans Pro Italic';
-      polygon-fill: #00FF0F;
-      text-fill: darken(@park, 50%);
-      text-size: 13;
-      text-wrap-width: 100;
-      text-wrap-before: true;
-       }
-    }
-  }
-}
+
 
 
 // Roads & Railways //
