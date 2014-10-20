@@ -19,18 +19,6 @@ Map {
 
 // Political boundaries //
 
-#admin {
-  line-join: round;
-  line-color: #bbe;
-//  [maritime=1] { line-color: darken(@water, 3%); }
-  // Countries
-  [admin_level=2] {
-    line-width: 1.4;
-    [zoom>=6] { line-width: 2; }
-    [zoom>=8] { line-width: 4; }
-    [disputed=1] { line-dasharray: 4,4; }
-  }
-}
 
 
 // Places //
@@ -50,6 +38,8 @@ Map {
     [zoom>=12] { text-size: 24; }
   }
   [type='town'][zoom<=17] {
+    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
+    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
     text-name: @name_haunted;
     text-face-name: @regtype; 
     text-fill: #333;
