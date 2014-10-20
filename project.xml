@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Map[]>
-<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#ffffff" background-image="footer_lodyas.png">
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-image="footer_lodyas.png">
 
 <Parameters>
   <Parameter name="attribution"><![CDATA[Map data © OpenStreetMap contributors]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-67.6758,11.2,5</Parameter>
+  <Parameter name="center">-81.682,41.4382,12</Parameter>
   <Parameter name="description"><![CDATA[welcome to a new world order. ]]></Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">17</Parameter>
@@ -543,30 +543,30 @@
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <Filter>([area] &gt; 500000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([area] &gt; 500000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([area] &gt; 10000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([area] &gt; 10000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="water_label"

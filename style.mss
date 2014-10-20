@@ -3,6 +3,8 @@
 @name_haunted: "[name_en].replace('(.+)(Heights)','Haunted $1')";
 @name_zombie: "[name_en].replace('(New)(.+)','Zombie$2')";
 @name_madvillians: "[name_en].replace('(.+)(ville)','$1villians')";
+@name_hell: "[name_en].replace('(.+)(hell)(.+)','$1hell$2')";
+@name_body: "[name_en].replace('Lake(.+)','Body of$1')";
 
 
 // Common Colors //
@@ -12,8 +14,9 @@
 @regtype: 'Elementa Pro Regular'; 
 
 Map {
-  background-color:#fff;
   background-image:url(footer_lodyas.png);
+ // polygon-pattern-alignment:global;
+//  background-color:#fff;
 }
 
 
@@ -71,6 +74,7 @@ Map {
 
 #water { 
   polygon-fill: black;
+ // polygon-pattern-alignment:global; 
  ::dark { polygon-fill: #D2D2D2; }
   ::light14[zoom<=14],
   ::light15[zoom=15],
@@ -91,7 +95,7 @@ Map {
   [zoom>=14][area>500000],
   [zoom>=16][area>10000],
   [zoom>=17] {
-    text-name: @name;
+    text-name: @name_body;
     text-face-name: @regtype;
     text-fill: darken(@water, 30%);
     text-size: 13;
