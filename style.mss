@@ -13,36 +13,24 @@
 
 Map {
   background-color:#fff;
-//  background-image:url(footer_lodyas.png);
+  background-image:url(footer_lodyas.png);
 }
 
 
 // Political boundaries //
 
-#admin {
-  line-join: round;
-  line-color: #bbe;
-  [maritime=1] { line-color: darken(@water, 3%); }
-  // Countries
-  [admin_level=2] {
-    line-width: 1.4;
-    [zoom>=6] { line-width: 2; }
-    [zoom>=8] { line-width: 4; }
-    [disputed=1] { line-dasharray: 4,4; }
-  }
-}
 
 
 // Places //
 
 #place_label {
-      ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
-    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
    [type='city'][zoom<=15]
 {
+    ::haunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
+    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
+    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
     text-name: @name;
     text-face-name: @regtype;
-    text-fill: #444;
     text-size: 16;
     text-wrap-width: 100;
     text-wrap-before: true;
@@ -50,6 +38,9 @@ Map {
     [zoom>=12] { text-size: 24; }
   }
   [type='town'][zoom<=17] {
+    ::aunted [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
+    ::zombie [name =~ '.*(New).*'] { text-name: @name_zombie; text-face-name: @regtype; }
+    ::madvillians [name =~ '.*(ville)'] { text-name: @name_madvillians; text-face-name: @regtype; }
     text-name: @name_haunted;
     text-face-name: @regtype; 
     text-fill: #333;
@@ -80,12 +71,12 @@ Map {
 
 #water { 
   polygon-fill: black;
- ::dark { polygon-fill: #aaa; }
+ ::dark { polygon-fill: #D2D2D2; }
   ::light14[zoom<=14],
   ::light15[zoom=15],
   ::light16[zoom=16],
   ::light17[zoom>=17] {
-    polygon-fill: #fff;
+    polygon-fill: #aaa;
     polygon-gamma: 0.9;
     image-filters: agg-stack-blur(8,8);
     image-filters-inflate: true;
