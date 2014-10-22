@@ -12,7 +12,7 @@
 
 // Common Colors //
 @water: #B0C7C2;
-@park: #BC9507;
+@cem: #BC9507;
 
 
 Map {
@@ -71,7 +71,7 @@ Map {
 // Landuse areas //
 
 #landuse {
-  [class='park'] { polygon-fill: @park; 
+  [class='cemetery'] { polygon-fill: @cem; 
     opacity: 0.4;
    } 
 //  ::dark { polygon-fill: #aaa; }
@@ -80,7 +80,7 @@ Map {
      // comp-op: grain-merge; 
 }  
 
-
+// p0eye
 
 
 // Roads & Railways //
