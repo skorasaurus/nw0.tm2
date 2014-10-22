@@ -39,7 +39,7 @@ Map {
   ::light17[zoom>=17] {
     polygon-fill: #aaa;
     polygon-gamma: 0.9;
-    image-filters: agg-stack-blur(8,8);
+    image-filters: agg-stack-blur(50,11);
     image-filters-inflate: true;
   }
   ::light15[zoom=15] { image-filters: agg-stack-blur(16,16); }
@@ -80,7 +80,12 @@ Map {
      // comp-op: grain-merge; 
 }  
 
-// p0eye
+// p0eye, 14 is earliest that mapbox streets will call them.
+#poi_label[zoom>=14] {
+    ::icon[maki='cemetery'] {
+    marker-file:url('icon_79209/16.png');
+    }
+}
 
 
 // Roads & Railways //
