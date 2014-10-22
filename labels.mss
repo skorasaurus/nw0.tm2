@@ -22,7 +22,7 @@
   }
   [type='town'][zoom<=17] {
     text-face-name: @regtype; 
-    text-fill: #666;
+    text-fill: #8F8F8F;
     text-size: 14; 
     text-name: @name; 
     text-wrap-width: 100;
@@ -42,7 +42,7 @@
   [type='suburb'],
   [type='neighbourhood'] {
     text-face-name: @regtype; 
-    text-fill: #666;
+    text-fill: #8F8F8F;
     text-size: 12;
     text-name: @name; 
     text-wrap-width: 100;
