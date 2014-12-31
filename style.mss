@@ -73,6 +73,7 @@ Map {
 #landuse {
   [class='cemetery'] { polygon-fill: @cem; 
     opacity: 0.4;
+    
    } 
 //  ::dark { polygon-fill: #aaa; }
    // ::lite15[zoom> 15] {      
@@ -101,16 +102,17 @@ Map {
     line-width: 0.5;
     [class='main'] {
       [zoom>=10] { line-width: 1; }
-    [zoom>=12] { line-width: 2; }
+    [zoom>=12] { line-width: .5; }
      [zoom>=14] { line-width: 3; }
      [zoom>=16] { line-width: 5; }
     }
     [class='street'],
     [class='street_limited'] {
-      [zoom>=14] { line-width: 1; }
+      [zoom<=14] { line-width: 0; }
+      [zoom>=15] { line-width: 1; }
       [zoom>=16] { line-width: 3; }
     }
-    [class='street_limited'] { line-dasharray: 4,1; }
+   // [class='street_limited'] { line-dasharray: 4,1; }
   }
 }
 

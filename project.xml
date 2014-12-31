@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[Map data © OpenStreetMap contributors]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-81.6804,41.4326,13</Parameter>
+  <Parameter name="center">-81.5776,41.4862,12</Parameter>
   <Parameter name="description"><![CDATA[welcome to a new world order. ]]></Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">17</Parameter>
@@ -17,7 +17,7 @@
 
 <Style name="landuse" filter-mode="first" opacity="0.4">
   <Rule>
-    <Filter>([class] = 'park')</Filter>
+    <Filter>([class] = 'cemetery')</Filter>
     <PolygonSymbolizer fill="#bc9507" />
   </Rule>
 </Style>
@@ -97,7 +97,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>waterway</StyleName>  </Layer>
 
-<Style name="water-light17" filter-mode="first" image-filters="agg-stack-blur(64,64),agg-stack-blur(8,8)" image-filters-inflate="true">
+<Style name="water-light17" filter-mode="first" image-filters="agg-stack-blur(64,64),agg-stack-blur(50,11)" image-filters-inflate="true">
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
@@ -122,7 +122,7 @@
     <PolygonSymbolizer fill="#aaaaaa" gamma="0.9" />
   </Rule>
 </Style>
-<Style name="water-light14" filter-mode="first" image-filters="agg-stack-blur(8,8)" image-filters-inflate="true">
+<Style name="water-light14" filter-mode="first" image-filters="agg-stack-blur(50,11)" image-filters-inflate="true">
   <Rule>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <PolygonSymbolizer fill="#aaaaaa" gamma="0.9" />
@@ -170,31 +170,31 @@
     <LineSymbolizer stroke-width="3" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
     <LineSymbolizer stroke-width="1" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
-    <LineSymbolizer stroke="#717171" stroke-opacity="0.33" stroke-width="0.5" />
+    <LineSymbolizer stroke-width="0" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-width="3" stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" />
+    <LineSymbolizer stroke-width="3" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-width="1" stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" />
+    <LineSymbolizer stroke-width="1" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" stroke-width="0.5" />
+    <LineSymbolizer stroke-width="0" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -211,7 +211,7 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
-    <LineSymbolizer stroke-width="2" stroke="#717171" stroke-opacity="0.33" />
+    <LineSymbolizer stroke-width="0.5" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -237,18 +237,18 @@
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-width="3" stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" />
+    <LineSymbolizer stroke-width="3" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-width="1" stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" />
+    <LineSymbolizer stroke-width="1" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" stroke-width="0.5" />
+    <LineSymbolizer stroke-width="0" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -256,15 +256,15 @@
     <LineSymbolizer stroke-width="3" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
     <LineSymbolizer stroke-width="1" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
-    <LineSymbolizer stroke="#717171" stroke-opacity="0.33" stroke-width="0.5" />
+    <LineSymbolizer stroke-width="0" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -281,7 +281,7 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
-    <LineSymbolizer stroke-width="2" stroke="#717171" stroke-opacity="0.33" />
+    <LineSymbolizer stroke-width="0.5" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -310,31 +310,31 @@
     <LineSymbolizer stroke-width="3" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
     <LineSymbolizer stroke-width="1" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
-    <LineSymbolizer stroke="#717171" stroke-opacity="0.33" stroke-width="0.5" />
+    <LineSymbolizer stroke-width="0" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-width="3" stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" />
+    <LineSymbolizer stroke-width="3" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-width="1" stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" />
+    <LineSymbolizer stroke-width="1" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-dasharray="4, 1" stroke="#717171" stroke-opacity="0.33" stroke-width="0.5" />
+    <LineSymbolizer stroke-width="0" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -351,7 +351,7 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
-    <LineSymbolizer stroke-width="2" stroke="#717171" stroke-opacity="0.33" />
+    <LineSymbolizer stroke-width="0.5" stroke="#717171" stroke-opacity="0.33" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -393,119 +393,227 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
-<Style name="place_label-hell" filter-mode="first">
-  <Rule>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'city') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
-  </Rule>
-</Style>
-<Style name="place_label-madvillians" filter-mode="first">
-  <Rule>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'city') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
-  </Rule>
-</Style>
-<Style name="place_label-zombie" filter-mode="first">
-  <Rule>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'city') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
-  </Rule>
-</Style>
-<Style name="place_label-haunted" filter-mode="first">
-  <Rule>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'city') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
-  </Rule>
-</Style>
 <Style name="place_label" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'town') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'town') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'town') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'town') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'town') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'town') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>750000</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>750000</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>750000</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>750000</MinScaleDenominator>
     <Filter>([type] = 'town') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([type] = 'town')</Filter>
-    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="20" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([type] = 'town')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>750000</MinScaleDenominator>
     <Filter>([type] = 'town')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="14" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="24" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="18" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" size="16" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="24" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="18" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" size="16" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(hill).*'))</Filter>
+    <TextSymbolizer size="24" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(hill).*'))</Filter>
+    <TextSymbolizer size="18" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(hill).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" size="16" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(ville)'))</Filter>
+    <TextSymbolizer size="24" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(ville)'))</Filter>
+    <TextSymbolizer size="18" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(ville)'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" size="16" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(New).*'))</Filter>
+    <TextSymbolizer size="24" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(New).*'))</Filter>
+    <TextSymbolizer size="18" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(New).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" size="16" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(Heights).*'))</Filter>
+    <TextSymbolizer size="24" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(Heights).*'))</Filter>
+    <TextSymbolizer size="18" face-name="Elementa Pro Regular" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([type] = 'city') and ([name].match('.*(Heights).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" size="16" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
@@ -526,370 +634,501 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <Filter>([type] = 'suburb') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <Filter>([type] = 'suburb') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <Filter>([type] = 'suburb') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <Filter>([type] = 'suburb') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <Filter>([type] = 'suburb') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <Filter>([type] = 'suburb') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'suburb') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'suburb')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'suburb')</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'suburb')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'village') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'village') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'village') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'village') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'village') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'village') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'village') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'village')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'village')</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'village')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(hill).*'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(hill).*'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(hill).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(ville)'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(ville)'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(ville)'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(New).*'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(New).*'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(New).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(Heights).*'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(Heights).*'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood') and ([name].match('.*(Heights).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'hamlet') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'hamlet') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'hamlet') and ([name].match('(San).*'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(San)(.+)','Satans $2')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([type] = 'hamlet') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'hamlet') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'hamlet') and ([name].match('.*(town)'))</Filter>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(town)','Ghosts of the $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(hill).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(hell)(.+)','$1hell$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(ville)'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(ville)','$1villians')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(New).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(New)(.+)','Zombie$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'hamlet') and ([name].match('.*(Heights).*'))</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(.+)(Heights)','Haunted $1')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([type] = 'hamlet')</Filter>
-    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="16" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([type] = 'hamlet')</Filter>
-    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#666666" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="14" face-name="Elementa Pro Regular" fill="#8f8f8f" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'hamlet')</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#666666" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#8f8f8f" size="12" wrap-width="100" wrap-before="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="place_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>place_label</StyleName>
-    <StyleName>place_label-haunted</StyleName>
-    <StyleName>place_label-zombie</StyleName>
-    <StyleName>place_label-madvillians</StyleName>
-    <StyleName>place_label-hell</StyleName>  </Layer>
+    <StyleName>place_label</StyleName>  </Layer>
 
 <Style name="water_label" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <Filter>([area] &gt; 500000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(Lake)(.+)','Body of$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([area] &gt; 500000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(Lake)(.+)','Body of$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([area] &gt; 10000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(Lake)(.+)','Body of$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([area] &gt; 10000)</Filter>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(Lake)(.+)','Body of$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(Lake)(.+)','Body of$2')]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('Lake(.+)','Body of$1')]]></TextSymbolizer>
+    <TextSymbolizer face-name="Elementa Pro Regular" fill="#5c827a" size="13" wrap-width="100" wrap-before="true" ><![CDATA[[name_en].replace('(Lake)(.+)','Body of$2')]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="water_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>water_label</StyleName>  </Layer>
 
+<Style name="poi_label-icon" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([maki] = 'cemetery')</Filter>
+    <MarkersSymbolizer file="icon_79209/16.png" />
+  </Rule>
+</Style>
 <Layer name="poi_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>poi_label-icon</StyleName>  </Layer>
 
 <Layer name="road_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
