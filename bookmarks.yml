@@ -1,1 +1,8 @@
-[]
+- place_name: Mineral City, 44656, Ohio, United States
+  zoom: 15
+  center: 
+    - 40.602158313721674
+    - -81.36478900909424
+  tags: 
+    - userbookmark
+  index: 0
