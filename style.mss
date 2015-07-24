@@ -39,11 +39,11 @@ Map {
   ::light17[zoom>=17] {
     polygon-fill: #aaa;
     polygon-gamma: 0.9;
-    image-filters: agg-stack-blur(50,11);
+    direct-image-filters: agg-stack-blur(11,11);
     image-filters-inflate: true;
   }
-  ::light15[zoom=15] { image-filters: agg-stack-blur(16,16); }
-  ::light16[zoom=16] { image-filters: agg-stack-blur(32,32); }
+ ::light15[zoom=15] { direct-image-filters: agg-stack-blur(16,16); }
+  ::light16[zoom=16] { direct-image-filters: agg-stack-blur(32,32); }
  ::light17[zoom<=17] { image-filters: agg-stack-blur(64,64); }
   } 
   
