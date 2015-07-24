@@ -3,7 +3,7 @@
 @name_haunted: "[name_en].replace('(.+)(Heights)','Haunted $1')";
 @name_zombie: "[name_en].replace('(New)(.+)','Zombie$2')";
 @name_madvillians: "[name_en].replace('(.+)(ville)','$1villians')";
-@name_hell: "[name_en].replace('(.+)(hell)(.+)','$1hell$2')";
+@name_hell: "[name_en].replace('(.+)(hill)(.+)','$1hell$2')";
 @name_body: "[name_en].replace('(Lake)(.+)','Body of$2')";
 @name_ghost:"[name_en].replace('(.+)(town)','Ghosts of the $1')";
 @name_satan:"[name_en].replace('(San)(.+)','Satans $2')";
