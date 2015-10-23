@@ -13,7 +13,7 @@
 // Common Colors //
 @water: #B0C7C2;
 @cem: #BC9507;
-
+@placefill: #8F8F8F;
 
 Map {
   background-image:url(footer_lodyas.png);
