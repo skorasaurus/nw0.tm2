@@ -6,6 +6,9 @@
 {   text-size: 16;
     text-name: @name;
     text-fill: @placefill; 
+   text-halo-fill: @halo;
+   text-halo-radius: 0.7;
+   text-halo-rasterizer: fast;
     text-face-name: @regtype;
     text-size: 16;
     text-wrap-width: 100;
@@ -26,6 +29,9 @@
     text-fill: @placefill; 
     text-size: 14; 
     text-name: @name; 
+   text-halo-fill: @halo;
+   text-halo-radius: 0.7;
+   text-halo-rasterizer: fast;
     text-wrap-width: 100;
     text-wrap-before: true;
     [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
@@ -46,6 +52,9 @@
     text-fill: @placefill; 
     text-size: 12;
     text-name: @name; 
+    text-halo-fill: @halo;
+   text-halo-radius: 0.4;
+   text-halo-rasterizer: fast;
     text-wrap-width: 100;
     text-wrap-before: true;
     [name =~ '.*(Heights).*'] { text-name: @name_haunted; text-face-name: @regtype; }
